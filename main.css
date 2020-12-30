@@ -35,6 +35,10 @@ a {
 .header .NM3 {
   color: #ffffff;
   font-size: 1.2rem;
+  transition: 0.15s;
+}
+.header .NM3:hover {
+  color: #efefef;
 }
 .header nav {
   margin-left: auto;
@@ -52,16 +56,21 @@ a {
   padding-right: 0;
 }
 .header nav ul li a {
+  position: relative;
+  display: inline-block;
   font-size: 1rem;
   color: #ffffff;
-  transition: 0.2s;
+  transition: 0.15s;
+}
+.header nav ul li a:hover {
+  color: #efefef;
 }
 .header nav ul li + li {
   border-left: 1px solid #ffffff;
 }
 
 .title {
-  padding-top: 10%;
+  padding-top: 5%;
 }
 .title .main-title {
   font-size: 4rem;
@@ -75,7 +84,7 @@ a {
 }
 
 .jump {
-  margin: 2rem auto;
+  margin: 2.5rem auto;
 }
 .jump .button {
   padding: 0.6em 1.6em;
@@ -86,5 +95,47 @@ a {
   cursor: pointer;
   color: #ab6ed7;
   box-shadow: 0px 20px 48px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s;
+  transition: all 0.15s;
+}
+.jump .button:hover {
+  background-color: #efefef;
+}
+
+@media screen and (max-width: 1440px) {
+  .title {
+    padding-top: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: block;
+    text-align: left;
+  }
+  .header .NM3 {
+    font-size: 2rem;
+  }
+  .header nav {
+    padding-top: 5%;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .title .main-title {
+    font-size: 2.5rem;
+  }
+  .title .sub-title {
+    font-size: 1.75rem;
+  }
+
+  .header nav ul li a {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 325px) {
+  .title .main-title {
+    font-size: 2rem;
+  }
+  .title .sub-title {
+    font-size: 1rem;
+  }
 }

@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 $white: #ffffff;
+$white-h: #efefef;
 $gradient: linear-gradient(-45deg, #7028e4 0%, #e5b2ca 100%);
 
 html {
@@ -39,6 +40,11 @@ a {
     .NM3 {
         color: $white;
         font-size: 1.2rem;
+        transition: .15s;
+
+        &:hover {
+            color: $white-h;
+        }
     }
 
     nav {
@@ -58,9 +64,16 @@ a {
                 }
 
                 a {
+                    position: relative;
+                    display: inline-block;
+
                     font-size: 1rem;
                     color: $white;
-                    transition: .2s;
+                    transition: .15s;
+
+                    &:hover {
+                        color: $white-h;
+                    }
                 }
             }
 
@@ -72,7 +85,7 @@ a {
 }
 
 .title {
-    padding-top: 10%;
+    padding-top: 5%;
 
     .main-title {
         font-size: 4rem;
@@ -88,12 +101,12 @@ a {
 }
 
 .jump {
-    margin: 2rem auto;
+    margin: 2.5rem auto;
 
     .button {
         padding: 0.6em 1.6em;
         border-radius: 25px;
-        background-color: #ffffff;
+        background-color: $white;
         font-size: 1rem;
         border: 0;
         cursor: pointer;
@@ -101,6 +114,69 @@ a {
     
         box-shadow: 0px 20px 48px rgba(0,0,0,0.1);
     
-        transition: all .2s;
+        transition: all .15s;
+
+        &:hover {
+            background-color: $white-h;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .title {
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        display: block;
+        text-align: left;
+
+        .NM3 {
+            font-size: 2rem;
+        }
+
+        nav {
+
+            padding-top: 5%;
+            padding-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .title {   
+        .main-title {
+            font-size: 2.5rem;
+        }
+    
+        .sub-title {
+            font-size: 1.75rem;
+        }
+    }
+
+    .header {
+        nav {
+            ul {
+                li {
+                    a {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .title {   
+        .main-title {
+            font-size: 2rem;
+        }
+    
+        .sub-title {
+            font-size: 1rem;
+        }
     }
 }
